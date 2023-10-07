@@ -9,4 +9,4 @@ To use, just call
 \usepgfplotslibrary{cramerimaps}
 ```
 
-
+Work in progress (not all colormaps implemented)
