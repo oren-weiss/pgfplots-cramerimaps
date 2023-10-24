@@ -16,14 +16,17 @@
 % http://www.ctan.org/tex-archive/graphics/pgf/contrib/pgfplots/doc/latex/plotdata/
 
 \usepackage{pgfplots}
-\usepgfplotslibrary{cramerimaps_new}
+\usepgfplotslibrary{cramerimaps}
 \pgfplotsset{compat=newest}
 \pagestyle{empty}
 \begin{document}
 \begin{tikzpicture}
-  \begin{axis}[colormap/bamO,colorbar]
+  \begin{axis}[view={0}{90},
+    colormap/vik,
+    colorbar,
+]
 	\addplot3[surf,
-		domain=0:360,samples=40]
+		domain=0:360,samples=60]
 		{sin(x)*sin(y)};
     \end{axis}
     \end{tikzpicture}
