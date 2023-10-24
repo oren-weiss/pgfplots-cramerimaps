@@ -1,0 +1,59 @@
+\documentclass{article}
+% translate with >> pdflatex -shell-escape <file>
+
+% This file is an extract of the PGFPLOTS manual, copyright by Christian Feuersaenger.
+%
+% Feel free to use it as long as you cite the pgfplots manual properly.
+%
+% See
+%   http://pgfplots.sourceforge.net/pgfplots.pdf
+% for the complete manual.
+%
+% Any required input files (for <plot table> or <plot file> or the table package) can be downloaded
+% at
+% http://www.ctan.org/tex-archive/graphics/pgf/contrib/pgfplots/doc/latex/
+% and
+% http://www.ctan.org/tex-archive/graphics/pgf/contrib/pgfplots/doc/latex/plotdata/
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{cramerimaps_new}
+\pgfplotsset{compat=newest}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[colormap/bamO,colorbar]
+	\addplot3[surf,
+		domain=0:360,samples=40]
+		{sin(x)*sin(y)};
+    \end{axis}
+    \end{tikzpicture}
+    \end{document}
+
+
+% \PassOptionsToPackage{dvipsnames,table}{xcolor}
+% \RequirePackage{luatex85}
+% \documentclass[10pt]{standalone}
+
+% \usepackage{fontspec}
+% \usepackage[]{unicode-math}
+% \usepackage{graphicx}
+
+% \usepackage{xparse}
+% \usepackage{xcolor}
+% \setmainfont{Helvetica Neue}
+% \setmathfont{Latin Modern Math}
+% \setmathfont{Helvetica Neue}[range={up/num,bfup/num},Scale=MatchUppercase]
+% \setmathfont{Helvetica Neue Italic}[range=it/{latin,Latin}]
+
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=newest}
+
+% \usepgfplotslibrary{cramerimaps}
+% \begin{tikzpicture}
+% 	\begin{axis}[colormap/roma]
+% 	\addplot3[surf,
+% 		domain=0:360,samples=40]
+% 		{sin(x)*sin(y)};
+% 	\end{axis}
+% \end{tikzpicture}
+% \end{document}
